@@ -43,7 +43,7 @@
             This field is required!
           </p>
           <p *ngIf="registerForm.controls['email'].errors?.['emailInvalid']">
-            {{ registerForm.controls['email'].errors?.['emailInvalid'].message }}
+            {{ registerForm.controls['email'].errors['emailInvalid'].message }}
           </p>
       </div>
       </div>
