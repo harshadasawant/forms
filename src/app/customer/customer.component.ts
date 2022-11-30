@@ -17,6 +17,23 @@ export class CustomerComponent implements OnInit {
   ngOnInit() {
     this.getCustomer();
   }
+  // addCustomer(customerId1: string,emailId:string, name: string): void {
+  //   let customerId=parseInt(customerId1)
+  //   let dateOfBirth='01/01/2000';
+  //   let customertype='type';
+  //   this.customerService.addCustomer({customerId, name, emailId, dateOfBirth,customertype })
+  //     .subscribe({next:(customer: any) => this.customer.push(customer)});
+  // }
+  addCustomer(data:any): void {
+
+    this.customerService.addCustomer(data)
+      .subscribe({next:(customer: any) => this.customer.push(customer)});
+  }
+  getCustFormValue(data: any){
+    console.warn(data);
+    this.addCustomer(data);
+    console.warn("cus",this.customer);
+  }
 
 
 }
@@ -24,7 +41,7 @@ export class Customer{
   customerId!: number;
   emailId!: string;
   name!: string;
-  dateOfBirth! : string;
-  customertype!: string
+  dateOfBirth : string = "01/01/2000"
+  customertype: string = "type1";
 
 }

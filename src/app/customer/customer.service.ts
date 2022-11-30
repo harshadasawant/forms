@@ -33,4 +33,11 @@ export class CustomerService {
 
   }
 
+  addCustomer(customer: Customer): Observable<any> {
+    const options = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post('http://localhost:9092/hndbank/customers', customer, { headers: options }).pipe(
+      catchError(this.handleError));
+  }
+
+
 }

@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BookComponent } from './book/book.component';
 import { CustomerComponent } from './customer/customer.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     AppRoutingModule,
     ReactiveFormsModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
