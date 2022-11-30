@@ -38,6 +38,18 @@ export class CustomerService {
     return this.http.post('http://localhost:9092/hndbank/customers', customer, { headers: options }).pipe(
       catchError(this.handleError));
   }
+  updateCustomer(id:number,data: any): Observable<any> {
+    const options = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.put(`http://localhost:9092/hndbank/customers/${id}`, data, { headers: options }).pipe(
+      catchError(this.handleError));
+  }
+  deleteCustomer(id:number,data: any): Observable<any> {
+    const options = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.delete(`http://localhost:9092/hndbank/customers/${id}`, data).pipe(
+      catchError(this.handleError));
+  }
+
+
 
 
 }

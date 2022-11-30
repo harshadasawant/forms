@@ -25,9 +25,27 @@ export class CustomerComponent implements OnInit {
   }
   getCustFormValue(data: any){
     console.warn(data);
-    this.addCustomer(data);
+    // this.addCustomer(data);
+    // this.updateCustomer(data);
+    this.deleteCustomer(data);
     console.warn("cus",this.customer);
   }
+  updateCustomer(data:any): void {
+
+    this.customerService.updateCustomer(4,data)
+      .subscribe({next:(customer: any) => this.customer = this.customer});
+  }
+  deleteCustomer(data:any): void {
+
+    this.customerService.deleteCustomer(4,data)
+      .subscribe({next:(customer: any) => this.customer = this.customer});
+  }
+  // deleteBook(bookId: string): void {
+  //   let id=parseInt(bookId)
+  //   this.bookService.deleteBook(id)
+  //     .subscribe({next:(book: any) => this.books = book});
+  // }
+
 
 
 }
