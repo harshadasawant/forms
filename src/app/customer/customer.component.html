@@ -7,8 +7,8 @@
   <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
 
   <form #custForm="ngForm" (ngSubmit)="getCustFormValue(custForm.value)" >
-    <input type="text" ngModel name="customerId"> <br>
-    <input type="text" ngModel name="name"> <br>
-    <input type="text" ngModel name="emailId"> <br>
+    Customer Id:<input type="text" ngModel name="customerId"> <br>
+   Name: <input type="text" ngModel name="name"> <br>
+   EmailId: <input type="text" ngModel name="emailId"> <br>
     <button>Add new</button>
   </form>

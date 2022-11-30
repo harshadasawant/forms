@@ -17,13 +17,7 @@ export class CustomerComponent implements OnInit {
   ngOnInit() {
     this.getCustomer();
   }
-  // addCustomer(customerId1: string,emailId:string, name: string): void {
-  //   let customerId=parseInt(customerId1)
-  //   let dateOfBirth='01/01/2000';
-  //   let customertype='type';
-  //   this.customerService.addCustomer({customerId, name, emailId, dateOfBirth,customertype })
-  //     .subscribe({next:(customer: any) => this.customer.push(customer)});
-  // }
+
   addCustomer(data:any): void {
 
     this.customerService.addCustomer(data)
