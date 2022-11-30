@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+// import { CustomerService } from './service/customer.service';
 
 
 
@@ -25,4 +26,11 @@ export class AppComponent {
       error => this.errors = true,
       () => this.finished = true);
   }
+  customer:any;
+  // constructor(private customerservice:CustomerService){
+  //   this.customerservice.cust().subscribe((data)=>{
+  //     console.warn("data",data);
+  //   })
+  // }
+
 }

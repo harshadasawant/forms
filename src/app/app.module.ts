@@ -7,19 +7,23 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BookComponent } from './book/book.component';
+import { CustomerComponent } from './customer/customer.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationFormComponent,
-    BookComponent
+    BookComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
