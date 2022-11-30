@@ -12,7 +12,7 @@ export class CustomerComponent implements OnInit {
   errorMessage!: string;
   constructor(private customerService: CustomerService) { }
   getCustomer() {
-   this.customerService.getCustomer().subscribe(customer => this.customer = customer)
+   this.customerService.getCustomer().subscribe({next:customer => this.customer = customer, error:error => this.errorMessage=error})
   }
   ngOnInit() {
     this.getCustomer();
