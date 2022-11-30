@@ -10,6 +10,13 @@ import { BookComponent } from './book/book.component';
 import { CustomerComponent } from './customer/customer.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { AboutcompanyComponent } from './aboutcompany/aboutcompany.component';
+import { AboutmeComponent } from './aboutme/aboutme.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { NopageComponent } from './nopage/nopage.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -17,7 +24,14 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     RegistrationFormComponent,
     BookComponent,
-    CustomerComponent
+    CustomerComponent,
+    AboutComponent,
+    AboutcompanyComponent,
+    AboutmeComponent,
+    HomeComponent,
+    LoginComponent,
+    NopageComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
